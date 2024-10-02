@@ -17,6 +17,7 @@ mongoose.connect(dbURL)
 
 const app = express();
 const UserRouter = require("./router/UserRouter");
+const ProductRouter = require("./router/ProductRouter");
 
 
 const corsConfig = {
@@ -30,6 +31,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use("/api/user", UserRouter);
+app.use("/api/product", ProductRouter);
 
 app.use(function cb(req, res) {
     // console.log("");
