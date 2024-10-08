@@ -7,7 +7,7 @@ const cors = require("cors");
 dotenv.config();
 const { PORT, DB_PASSWORD, DB_USER } = process.env;
 
-const dbURL = `mongodb+srv://${DB_USER}:${DB_PASSWORD}@cluster0.drcvhxp.mongodb.net/?retryWrites=true&w=majority`;
+const dbURL = `mongodb+srv://${DB_USER}:${DB_PASSWORD}@scaler.h6nyo.mongodb.net/?retryWrites=true&w=majority&appName=scaler`;
 
 mongoose.connect(dbURL)
     .then(() => console.log("Connected to DB"))
